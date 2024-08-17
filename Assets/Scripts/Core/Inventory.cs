@@ -13,6 +13,8 @@ namespace DefaultNamespace
         {
             public int Count;
             // other stuff?
+            
+            public static ItemInfo Empty() => new() { Count = 0 };
         }
 
         [System.Serializable]
@@ -63,14 +65,13 @@ namespace DefaultNamespace
             }
         }
 
-        [CanBeNull]
         public ItemInfo GetItemInfo(Gatherable gatherable)
         {
             foreach (var g in items)
                 if (g.Key == gatherable)
                     return g.Value;
 
-            return null;
+            return ItemInfo.Empty();
         }
     }
 }
