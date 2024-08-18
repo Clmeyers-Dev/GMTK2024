@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Plant
+  - HarvesterAnt
+  - EnemyAnt
+  - AntHill
+  - Defender
   layers:
   - Default
   - TransparentFX

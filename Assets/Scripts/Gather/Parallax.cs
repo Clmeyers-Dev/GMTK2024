@@ -1,13 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
     public float parallaxMultiplier;
     public Vector3 originalPosition;
-    
+
     private Transform _transform;
 
     private void Start()
@@ -18,7 +15,7 @@ public class Parallax : MonoBehaviour
 
     void LateUpdate()
     {
-        this._transform.position = this.originalPosition + (Vector3) CalculateParallax();
+        this._transform.position = this.originalPosition + (Vector3)CalculateParallax();
     }
 
     Vector2 CalculateParallax()

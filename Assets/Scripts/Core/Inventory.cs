@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using JetBrains.Annotations;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 namespace DefaultNamespace
 {
@@ -13,7 +10,7 @@ namespace DefaultNamespace
         {
             public int Count;
             // other stuff?
-            
+
             public static ItemInfo Empty() => new() { Count = 0 };
         }
 
@@ -47,7 +44,7 @@ namespace DefaultNamespace
                 }));
             }
         }
-        
+
         public bool TryTakeGatherable(Gatherable gatherable)
         {
             var gather = this.GetItemInfo(gatherable);
@@ -55,7 +52,7 @@ namespace DefaultNamespace
             {
                 if (gather.Count <= 0)
                     return false;
-                
+
                 gather.Count--;
                 return true;
             }
